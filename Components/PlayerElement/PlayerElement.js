@@ -3,7 +3,7 @@ function renderPlayerElement(){
     for (let i of tags) {
         let playerName = i.getAttribute("PlayerName");
         
-        let Player = PLAYERS.filter(player => player['name']==playerName)[0];
+        let Player = getPlayer(playerName);
         
         let HTML=``;
         if (!Player) {
