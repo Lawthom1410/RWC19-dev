@@ -5,9 +5,9 @@ function importScript(component){
     body.append(script);
 }
 
-const constants = [
-    "MakeRequest"
-]
+// const constants = [
+//     "MakeRequest"
+// ]
 
 const services = [
     "PlayerService"
