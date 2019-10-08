@@ -18,7 +18,7 @@ function renderChatInputBar(){
                     </select>
                 </div>
                 <div class="chat-input-box-btn">
-                    <input id="message-input" class="form-control" type="text">
+                    <input id="message-input" placeholder="Type a Message" class="form-control" type="text">
                     <a class='material-icons footer-icon' id='chatSend'>send</a>
                 </div>
             </form>

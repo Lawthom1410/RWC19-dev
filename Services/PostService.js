@@ -16,6 +16,10 @@ function getPosts() {
     .then((value) => {
         POSTS = value.map(post => Post(post)).reverse();
         renderChatPosts();
+        if (stateChatPosts['scrolled']==false){
+            document.getElementsByClassName("Body")[0].scrollIntoView(false);
+            stateChatPosts['scrolled']=true;
+        }
     })
 }
 

@@ -1,8 +1,12 @@
+stateChatPosts = {
+    "scrolled": false
+}
+
 function renderChatPosts(){
     tags = document.getElementsByClassName("ChatPosts");
     for (let i of tags) {  
         let heightInput = document.getElementsByClassName("ChatInputBar")[0].clientHeight;
-        let HTML = `<div id="chat-posts">`;
+        let HTML = `<div id="chat-posts" style="padding-bottom:${heightInput}">`;
         let count = 0;
         for (post of POSTS){
             count++;

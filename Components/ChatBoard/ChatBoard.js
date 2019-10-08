@@ -15,10 +15,11 @@ async function renderChatBoard(){
         while (stateBody['board']=="ChatBoard" && count<120){
             count++;
             getPosts();
-            await sleep(500000);
+            await sleep(5000);
         }
         if (stateBody['board']=="ChatBoard"){
             window.alert("Message Board timed out, please refresh.");
         }
     }
+    stateChatPosts['scrolled']=false;
 }
