@@ -37,5 +37,6 @@ function sendMessage(playerId, messageContent) {
     let post = JSON.stringify(postObj);
     makeRequest("POST", "https://rugby-sweep-3.appspot.com/post", post).then(() => {
         console.log("Message Sent: " + post);
+        renderChatPosts();
     })
 }

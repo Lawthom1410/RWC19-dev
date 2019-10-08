@@ -12,7 +12,7 @@ function makeRequest(method, url, body) {
                 } else {
                     res(req.responseText);
                 }
-            } else {                
+            } else {              
                 rej('Error: ' + req.responseText);
             }
         }

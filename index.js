@@ -2,8 +2,8 @@ function indexJS(){
     if (PLAYERS) {
         try {
             renderApp();
-        } catch (ReferenceError) {
+        } catch (e) {
             location.reload();
         }
-    }
+    } 
 }

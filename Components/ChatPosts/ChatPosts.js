@@ -1,13 +1,27 @@
 function renderChatPosts(){
     tags = document.getElementsByClassName("ChatPosts");
-    for (let i of tags) {        
-        let HTML = ``;
+    for (let i of tags) {  
+        let heightInput = document.getElementsByClassName("ChatInputBar")[0].clientHeight;
+        let HTML = `<div id="chat-posts">`;
+        let count = 0;
         for (post of POSTS){
+            count++;
             HTML += `
-            <h1>[${post['time'].slice(0,5)}]    ${getPlayerById(post['playerId'])['name']}</h1>
-            <h2 style="font-weight: lighter">${JSON.parse(post['postContent'])[0]['content']}<h2>
+            <div class="card" id="post-card-${count}">
+                <div class="chat-post-container">
+                    <div>
+                    <img src="./img/Players/`+getPlayerById(post['playerId'])['name']+`Sqr.png" class="fixture-element-img">
+                    </div>
+                    <div class="chat-post-text-box">
+                        <h1>${getPlayerById(post['playerId'])['name']}</h1>
+                        <h1 class="chat-post-time" style="font-weight: lighter">${post['time'].slice(0,5)}</h1>
+                        <h2 class="chat-post-text">${JSON.parse(post['postContent'])[0]['content']}<h2>
+                    </div>
+                </div>
+            </div>
             `
         } 
+        HTML += `</div>`
 
         i.innerHTML = HTML;
     }

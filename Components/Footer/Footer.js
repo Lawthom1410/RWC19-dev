@@ -42,6 +42,7 @@ function Footer_handlePlayersBtn(){
 function Footer_handleChatBtn(){
     renderBody("ChatBoard");
     document.getElementsByClassName("Body")[0].scrollIntoView();
+    // $("#chat-posts").scrollTop($("#chat-posts")[0].scrollHeight);
     renderFooter("chatBtn");
 }
 
