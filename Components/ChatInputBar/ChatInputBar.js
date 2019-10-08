@@ -23,7 +23,7 @@ function renderChatInputBar(){
                 </div>
                 <div class="chat-input-box-btn">
                     <input id="message-input" placeholder="Type a Message" class="form-control" type="text">
-                    <a class='material-icons footer-icon' id='chatSend'>send</a>
+                    <button class='material-icons chat-send-icon' style="color: rgb(10, 28, 44);" id='chatSend'>send</button>
                 </div>
             </form>
         </div>

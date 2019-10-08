@@ -363,6 +363,9 @@
     /* background: whitesmoke; */
     /* border: solid rgb(10, 28, 44) 10px; */
 }
+.chat-send-icon{
+    font-size: 6rem;
+}
 .chat-post-container{
     padding-top: 10px;
     display: grid;
@@ -391,12 +394,12 @@
     display: grid;
     grid-template-rows: auto auto;
     grid-row-gap: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 60px;
 }
 #message-input{
     height: 100px;
     width: 600px;
     margin:auto;
     padding: 0;
-    font-size: 40px;
+    font-size: 50px;
 }
