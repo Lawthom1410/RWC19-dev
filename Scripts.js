@@ -12,13 +12,15 @@ function importScript(script, scriptType){
     body.append(tag);
 }
 
-const constants = [
-    "MakeRequest",
-    "Fixtures"
+const services = [
+    "PlayerService",
+    "PostService"
 ]
 
-const services = [
-    "PlayerService"
+const constants = [
+    "MakeRequest",
+    "Fixtures",
+    "Constants"
 ]
 
 const components = [
@@ -29,6 +31,8 @@ const components = [
     "FixturesBoard",
     "PlayersBoard",
     "ChatBoard",
+    "ChatPosts",
+    "ChatInputBar",
     "PlayersCard",
     "TournamentTable",
     "TournamentKnockoutMatch",
@@ -38,7 +42,7 @@ const components = [
     "FixturesCard"
 ]
 
-const scriptTypes = [constants, services, components];
+const scriptTypes = [services, constants, components];
 for (scriptType of scriptTypes) {
     for (script of scriptType) {
         importScript(script, scriptType);

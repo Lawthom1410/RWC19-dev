@@ -1,7 +1,9 @@
 function indexJS(){
-    try {
-        renderApp();
-    } catch (ReferenceError) {
-        location.reload();
+    if (PLAYERS) {
+        try {
+            renderApp();
+        } catch (ReferenceError) {
+            location.reload();
+        }
     }
 }

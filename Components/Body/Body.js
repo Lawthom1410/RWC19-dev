@@ -1,5 +1,10 @@
+let stateBody = {
+    "board": "TournamentBoard"
+}
+
 function renderBody(board){
     if (!board) {board = "TournamentBoard"}
+    stateBody['board'] = board;
     tags = document.getElementsByClassName("Body");
     for (let i of tags) {
         
