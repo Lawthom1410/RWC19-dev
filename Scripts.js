@@ -13,18 +13,17 @@ function importScript(script, scriptType){
 }
 
 const services = [
-    "PlayerService",
+    "Fixtures",
+    "Players",
     "PostService"
 ]
 
 const constants = [
     "MakeRequest",
-    "Fixtures",
     "Constants"
 ]
 
 const components = [
-    "App",
     "Header",
     "Body", "TitleBar", "TournamentBoard",
     "Footer",
@@ -48,3 +47,4 @@ for (scriptType of scriptTypes) {
         importScript(script, scriptType);
     }
 }
+importScript("App", components);

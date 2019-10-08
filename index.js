@@ -1,9 +1,9 @@
 function indexJS(){
-    if (PLAYERS) {
-        try {
+    // if (PLAYERS) {
+    //     try {
             renderApp();
-        } catch (e) {
-            location.reload();
-        }
-    } 
+    //     } catch (e) {
+    //         location.reload();
+    //     }
+    // } 
 }

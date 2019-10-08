@@ -1,3 +1,7 @@
+stateChatInputBar = {
+    "player": null
+}
+
 function renderChatInputBar(){
     tags = document.getElementsByClassName("ChatInputBar");
     for (let i of tags) {        
