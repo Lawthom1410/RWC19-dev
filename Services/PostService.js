@@ -2,7 +2,8 @@ function Post(args){
     return {
         "postId": args['postId'],
         "playerId": args['playerId'],
-        "datetime": args['datetime'],
+        "date": args['date'],
+        "time": args['time'],
         "likes": parseInt(args['likes']),
         "dislikes": parseInt(args['dislikes']),
         "postType": args['postType'],
