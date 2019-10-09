@@ -10,6 +10,7 @@ async function renderChatBoard(){
         i.innerHTML = HTML;
 
         renderChatInputBar();
+        renderChatPosts();
 
         let count = 0;
         while (stateBody['board']=="ChatBoard" && count<120){

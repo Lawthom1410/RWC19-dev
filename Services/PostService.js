@@ -11,6 +11,7 @@ function Post(args){
     }
 }
 
+getPosts();
 function getPosts() {
     makeRequest("GET", "https://rugby-sweep-3.appspot.com/post")
     .then((value) => {
@@ -41,6 +42,9 @@ function sendMessage(playerId, messageContent) {
     let post = JSON.stringify(postObj);
     makeRequest("POST", "https://rugby-sweep-3.appspot.com/post", post).then(() => {
         console.log("Message Sent: " + post);
+        stateChatPosts['scrolled']=false;
+        getPosts();
         renderChatPosts();
+        document.getElementsByClassName("Body")[0].scrollIntoView(false);
     })
 }

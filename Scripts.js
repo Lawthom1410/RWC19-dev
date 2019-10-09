@@ -41,7 +41,7 @@ const components = [
     "FixturesCard"
 ]
 
-const scriptTypes = [services, constants, components];
+const scriptTypes = [constants, services, components];
 for (scriptType of scriptTypes) {
     for (script of scriptType) {
         importScript(script, scriptType);

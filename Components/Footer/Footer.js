@@ -42,6 +42,7 @@ function Footer_handlePlayersBtn(){
 function Footer_handleChatBtn(){
     renderBody("ChatBoard");
     stateChatPosts['scrolled']=false;
+    document.getElementsByClassName("Body")[0].scrollIntoView(false);
     renderFooter("chatBtn");
 }
 

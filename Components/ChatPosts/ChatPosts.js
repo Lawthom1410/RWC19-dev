@@ -19,7 +19,7 @@ function renderChatPosts(){
                     <div class="chat-post-text-box">
                         <h1>${getPlayerById(post['playerId'])['name']}</h1>
                         <h1 class="chat-post-time" style="font-weight: lighter">${post['time'].slice(0,5)}</h1>
-                        <h2 class="chat-post-text">${JSON.parse(post['postContent'])[0]['content']}<h2>
+                        <h2 class="chat-post-text style="font-weight: light">${JSON.parse(post['postContent'])[0]['content']}<h2>
                     </div>
                 </div>
             </div>
