@@ -11,6 +11,7 @@ function Post(args){
     }
 }
 
+let POSTS=[];
 getPosts();
 function getPosts() {
     makeRequest("GET", "https://rugby-sweep-3.appspot.com/post")

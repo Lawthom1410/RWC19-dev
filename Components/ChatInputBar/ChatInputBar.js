@@ -8,19 +8,8 @@ function renderChatInputBar(){
         let HTML = `
         <div class="card chat-input-container">
             <h1 id="chat-error-message"></h1>
+            <button class="btn btn-lg btn-danger" onClick="handleLogOut()">Log Out</button>
             <form id="message-input-form" onSubmit="return handleChatInput(this)">
-                <div>
-                    <select id="player-select" name="Player">
-                        <option disabled selected value> -- Who are you? -- </option>
-                    `
-                    for (player of PLAYERS) {
-                        HTML += `
-                        <option value="${player['playerId']}">${player['name']}</option>
-                        `
-                    }
-                    HTML += `
-                    </select>
-                </div>
                 <div class="chat-input-box-btn">
                     <input id="message-input" placeholder="Type a Message" class="form-control" type="text">
                     <button class='material-icons chat-send-icon' style="color: rgb(10, 28, 44);" id='chatSend'>send</button>
@@ -48,4 +37,10 @@ function handleChatInput(data){
         document.getElementById("chat-error-message").innerText = "Message should be less than 250 characters";
     }
     return false;
+}
+
+function handleLogOut(){
+    sessionStorage.removeItem("activePlayer");
+    stateChatBoard['activePlayer'] = null;
+    renderChatBoard();
 }

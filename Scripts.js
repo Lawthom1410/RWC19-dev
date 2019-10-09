@@ -31,6 +31,7 @@ const components = [
     "PlayersBoard",
     "ChatBoard",
     "ChatPosts",
+    "ChatLogin",
     "ChatInputBar",
     "PlayersCard",
     "TournamentTable",
