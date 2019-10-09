@@ -23,7 +23,7 @@ function renderChatInputBar(){
 }
 
 function handleChatInput(data){
-    let playerId = data.elements["player-select"].value;
+    let playerId = stateChatBoard['activePlayer'];
     let messageContent = data.elements["message-input"].value;
     if (playerId && messageContent.length<250){
         document.getElementById("chat-error-message").innerText = "";
