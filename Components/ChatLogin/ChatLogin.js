@@ -3,10 +3,10 @@ function renderChatLogin(){
     for (let i of tags) {  
         let HTML = `
         <div class="card login-card">
-            <h1 id="login-error">Please Log In</h1>
+            <h1 id="login-error">Log in to make post</h1>
             <form id="login-form" onSubmit="handleLogin(this)">
-                <input id="username" class="form-control login-input" type="text">
-                <input id="pin" class="form-control login-input" type="number">
+                <input id="username" class="form-control login-input" type="text" placeholder="Name">
+                <input id="pin" class="form-control login-input" type="number" placeholder="PIN">
                 <button class="btn btn-lg btn-success login-input">Log In</button>
             </form>
         </div>        

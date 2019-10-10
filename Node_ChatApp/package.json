@@ -1,0 +1,24 @@
+{
+  "name": "rwc19-dev",
+  "version": "1.0.0",
+  "description": "development and testin for rwc19 project",
+  "main": "chatIndex.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lawthom1410/RWC19-dev.git"
+  },
+  "author": "Jack Lawthom <jacklawthom@yahoo.co.uk> (http://lawthom.tech)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lawthom1410/RWC19-dev/issues"
+  },
+  "homepage": "https://github.com/Lawthom1410/RWC19-dev#readme",
+  "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}

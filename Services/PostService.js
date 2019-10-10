@@ -14,6 +14,7 @@ function Post(args){
 let POSTS=0;
 getPosts();
 function getPosts() {
+    console.log("get posts");
     makeRequest("GET", "https://rugby-sweep-3.appspot.com/post")
     .then((value) => {
         POSTS = value.map(post => Post(post)).reverse();

@@ -44,5 +44,6 @@ function Footer_handleChatBtn(){
     stateChatPosts['scrolled']=false;
     document.getElementsByClassName("Body")[0].scrollIntoView(false);
     renderFooter("chatBtn");
+    // window.location = "http://localhost:8080";
 }
 

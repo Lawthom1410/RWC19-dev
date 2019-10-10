@@ -21,7 +21,7 @@ function renderChatPosts(){
                         <img src="./img/Players/`+getPlayerById(post['playerId'])['name']+`Sqr.png" class="fixture-element-img">
                         </div>
                         <div class="chat-post-text-box">
-                            <h1>${getPlayerById(post['playerId'])['name']}</h1>
+                            <h1><strong>${getPlayerById(post['playerId'])['name']}</strong> says</h1>
                             <h2 class="chat-post-time" style="font-weight: lighter">${post['time'].slice(0,5)}</h2>
                             <h2 class="chat-post-text style="font-weight: light">${JSON.parse(post['postContent'])[0]['content']}<h2>
                         </div>
@@ -30,11 +30,12 @@ function renderChatPosts(){
                 `
             } 
             HTML += `</div>`
-        } else if (stateChatPosts['retries']<2) {
+        } else if (stateChatPosts['retries']<10) {
             HTML += `
             <h1>Loading Posts</h1>
             `
             stateChatPosts['retries']++;
+            console.log(stateChatPosts['retries']);
         } else {
             HTML += `
             <h1>Servers are down atm!</h1>
