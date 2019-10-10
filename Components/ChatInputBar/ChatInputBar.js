@@ -32,7 +32,7 @@ function renderChatInputBar(){
 function handleChatInput(data){
     let playerId = stateChatBoard['activePlayer'];
     let messageContent = data.elements["message-input"].value;
-    if (playerId && messageContent.length<250){
+    if (playerId){
         document.getElementById("chat-error-message").innerText = "";
         sendMessage(playerId, messageContent);
         renderChatPosts();
@@ -40,9 +40,11 @@ function handleChatInput(data){
     } else if (!playerId){
         document.getElementById("chat-error-message").innerText = "Who are you??";
         console.log("Who are you?");
-    } else if (messageContent>250) {
-        document.getElementById("chat-error-message").innerText = "Message should be less than 250 characters";
-    }
+    } 
+    // else if (messageContent>250) {
+    //     document.getElementById("chat-error-message").innerText = "Message should be less than 250 characters";
+    //     console.log("too long");
+    // }
     return false;
 }
 
